@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}" prefix="og: https://ogp.me/ns#">
+  <head>
+    {{ partial "baseof/head.html" . }}
+    {{ block "head" . }}
+    {{ end }}
+    {{ partial "head_custom.html" . }}
+  </head>
+  <body>
+    <div class="MainContainer">
+      <header class="MainContainer__header">
+        <div class="MainLogo">
+          <a class="MainLogo__link" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+        </div>
+      </header>
+      <main class="MainContainer__main">
+        {{ block "main" . }}
+        {{ end }}
+      </main>
+      <footer class="MainContainer__footer">
+        {{ partial "baseof/profile.html" . }}
+        {{ partial "baseof/menu.html" . }}
+        <div class="Copyright"><small>&copy; {{ .Site.Copyright }}</small></div>
+      </footer>
+    </div>
+    {{ if or .Params.math .Site.Params.math }}
+      {{ partial "baseof/math.html" . }}
+    {{ end }}
+    {{ partial "body_custom.html" . }}
+  </body>
+</html>

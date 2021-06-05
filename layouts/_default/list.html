@@ -1,0 +1,13 @@
+{{ define "main" }}
+    <section class="ListMainSection">
+        {{ if eq .Kind "term" }}
+        <h1>{{ humanize .Data.Singular }}: {{ .Title }}</h2>
+        {{ else }}
+        <h1>{{ .Title }}</h2>
+        {{ end }}
+        {{ range .Paginator.Pages }}
+            {{ .Render "summary" }}
+        {{ end }}
+        {{ template "_internal/pagination.html" . }}
+    </section>
+{{ end }}

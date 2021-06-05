@@ -1,0 +1,19 @@
+<nav class="Menu">
+    <ul>
+      {{ $currentPage := . }}
+      {{ range sort .Site.Menus.main "Weight" }}      
+          <li>
+              <a href="{{ .URL | absURL }}">{{ .Name }}</a>
+              {{ if .HasChildren }}
+                <ul>
+                    {{ range .Children }}
+                        <li>
+                            <a href="{{ .URL | absURL }}">{{ .Name }}</a>
+                        </li>
+                    {{ end }}
+                </ul>
+              {{ end }}
+          </li>
+      {{ end }}
+    </ul>
+</nav>

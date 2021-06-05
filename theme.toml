@@ -1,0 +1,12 @@
+name = "nox"
+license = "MIT"
+licenselink = "https://github.com/k1350/nox/blob/master/LICENSE"
+description = "A simple Hugo dark theme for a personal blog."
+homepage = "https://github.com/k1350/nox"
+tags = ["Responsive", "Blog", "Dark", "Minimal", "Simple"]
+features = ["Responsive", "Math Typesetting", "Open Graph protocol", "Twitter cards"]
+min_version = "0.83.1"
+
+[author]
+  name = "MITAMURA Kimiko"
+  homepage = "https://blog.84b9cb.info"

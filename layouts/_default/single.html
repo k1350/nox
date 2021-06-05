@@ -1,0 +1,36 @@
+{{ define "main" }}
+  <article>
+    <header class="SingleArticleHeader">
+      <h1>{{ .Title }}</h1>
+      {{ if .Params.hideDate }}
+      {{ else}}
+        <div class="SingleArticleHeader__time">
+          {{ partial "time.html" . }}
+        </div>
+      {{ end }}
+      {{ partial "taxonomies.html" .}}
+    </header>
+    <section>
+    {{ .Content }}
+    </section>
+    {{ if .Params.hideNav }}
+    {{ else }}
+      <footer>
+        <nav class="SingleArticleNav">
+          <div class="SingleArticleNav__next">
+            {{ if .NextInSection }}
+              {{ with .NextInSection }}<a href="{{ .Permalink }}">&lt; {{ .Title }}</a>{{ end }}
+            {{ else }}
+            {{ end }}
+          </div>
+          <div class="SingleArticleNav__prev">
+            {{ if .PrevInSection }}
+              {{ with .PrevInSection }}<a href="{{ .Permalink }}">{{ .Title }} &gt;</a>{{ end }}
+            {{ else }}
+            {{ end }}
+          </div>
+        </nav>
+      </footer>
+    {{ end }}
+  </article>
+{{ end }}

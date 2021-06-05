@@ -1,0 +1,17 @@
+{{ $homeArticles := 3}}
+{{ if .Site.Params.homeArticles }}
+  {{ $homeArticles = .Site.Params.homeArticles }}
+{{ end }}
+{{ $h1 := .Page.Title }}
+{{ if .Page.Params.HomeTitle }}
+  {{ $h1 = .Page.Params.HomeTitle }}
+{{ end }}
+<section>
+    <h1>{{ $h1 }}</h1>
+    {{ range first $homeArticles (where .Site.RegularPages "Section" .Page.Section) }}
+    {{ .Render "summary" }}
+    {{ end }}
+    <nav class="HomeSectionNav">
+      <a class="HomeSectionNav__link" href="{{ .Site.BaseURL }}{{ .Page.Section }}/">{{ .Page.Title }} &gt;</a>
+    </nav>
+</section>

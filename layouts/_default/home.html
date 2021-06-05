@@ -1,0 +1,14 @@
+{{ define "main" }}
+  {{ $site := .Site }}
+  {{ if .Site.Params.homeSections }}
+    {{ range .Site.Params.homeSections }}
+      {{ with $site.GetPage . }}
+        {{ .Render "li" }}
+      {{ end }}
+    {{ end }}
+  {{ else }}
+    {{ range .Site.Sections }}
+      {{ .Render "li" }}
+    {{ end }}
+  {{ end }}
+{{ end }}

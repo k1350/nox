@@ -1,0 +1,64 @@
+baseURL = "https://example.com/"
+title = "Nox Theme"
+copyright = "2021 xxxx"
+paginate = 5
+languageCode = "ja-jp"
+DefaultContentLanguage = "ja"
+enableInlineShortcodes = true
+enableEmoji = true
+ignoreErrors = ["error-remote-getjson"]
+theme = "nox"
+
+[author]
+    name = "xxxx"
+    profile = "ここにプロフィールを書きます。"
+    # アバターのURLは baseURL からの相対パスで記述してください
+    avatar = "images/avatar.jpg"
+    [[author.links]]
+        name = "GitHub"
+        url = "https://github.com/"
+    [[author.links]]
+        name = "GitLab"
+        url = "https://gitlab.com/"
+    [[author.links]]
+        name = "Contact"
+        url = "/contact/"
+
+[ params ]
+    homeArticles = 4
+    homeSections = ["post", "log"]
+    description = "Hugo 用のテーマ Nox の使用例です。"
+    images = ["/images/NoxTheme.png"]
+    title = "Nox Theme"
+
+[ taxonomies ]
+    tag = "tags"
+    series = "series"
+
+[menu]
+    [[menu.main]]
+        identifier = "/about"
+        name = "About"
+        url = "/about/"
+        weight = -20
+    [[menu.main]]
+        identifier = "/post"
+        name = "記事一覧"
+        url = "/post/"
+        weight = -10
+    [[menu.main]]
+        identifier = "/log"
+        name = "ログ一覧"
+        url = "/log/"
+        weight = 0
+    [[menu.main]]
+        identifier = "/tags"
+        name = "Tags"
+        url = "/tags/"
+        weight = 10
+    [[menu.main]]
+        identifier = "/tags/css"
+        name = "CSS"
+        url = "/tags/css/"
+        weight = 10
+        parent = "/tags"

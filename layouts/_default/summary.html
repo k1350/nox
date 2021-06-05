@@ -1,0 +1,9 @@
+<article class="ListArticle">
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <div class="ListArticle__time">
+        {{ partial "time.html" .Params }}
+    </div>
+    <div class="ListArticle__summary">
+        {{ .Summary | plainify | safeHTML }}
+    </div>
+</article>
