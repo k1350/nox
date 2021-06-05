@@ -1,6 +1,6 @@
 name = "nox"
 license = "MIT"
-licenselink = "https://github.com/k1350/nox/blob/master/LICENSE"
+licenselink = "https://github.com/k1350/nox/blob/main/LICENSE"
 description = "A simple Hugo dark theme for a personal blog."
 homepage = "https://github.com/k1350/nox"
 tags = ["Responsive", "Blog", "Dark", "Minimal", "Simple"]
