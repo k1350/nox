@@ -12,6 +12,19 @@
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
 
+{{ $rss := newScratch }}
+{{ if .IsHome }}
+    {{ $rss.Set "name" $.Site.Title }}
+{{ else }}
+    {{ $rss.Set "name" $.Title }}
+    {{ $rss.Add "name" "|" }}
+    {{ $rss.Add "name" $.Site.Title }}
+{{ end }}
+{{ $rssName := $rss.Get "name" }}
+{{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $rssName | safeHTML }}
+{{ end -}}
+
 <link rel="preconnect" href="https://fonts.gstatic.com" />
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Source+Code+Pro:ital@0;1&display=swap" rel="stylesheet">
 {{ $style := resources.Get "css/base.css" | resources.Minify | resources.Fingerprint }}
