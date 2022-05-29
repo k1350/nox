@@ -231,12 +231,13 @@ li {
 .pagination {
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto 1fr;
+  grid-template-columns: repeat(auto-fit, 2em);
   column-gap: 1em;
   list-style-type: none;
   padding: 0;
   text-align: center;
   margin-top: var(--margin-top);
+  justify-content: center;
 }
 
 .pagination>.page-item {
