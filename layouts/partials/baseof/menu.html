@@ -3,12 +3,12 @@
       {{ $currentPage := . }}
       {{ range sort .Site.Menus.main "Weight" }}      
           <li>
-              <a href="{{ .URL | absURL }}">{{ .Name }}</a>
+              <a href="{{ .URL | relURL }}">{{ .Name }}</a>
               {{ if .HasChildren }}
                 <ul>
                     {{ range .Children }}
                         <li>
-                            <a href="{{ .URL | absURL }}">{{ .Name }}</a>
+                            <a href="{{ .URL | relURL }}">{{ .Name }}</a>
                         </li>
                     {{ end }}
                 </ul>

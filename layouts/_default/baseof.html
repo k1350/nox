@@ -10,7 +10,7 @@
     <div class="MainContainer">
       <header class="MainContainer__header">
         <div class="MainLogo">
-          <a class="MainLogo__link" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+          <a class="MainLogo__link" href="{{ .Site.BaseURL | relURL }}">{{ .Site.Title }}</a>
         </div>
       </header>
       <main class="MainContainer__main">
