@@ -1,10 +1,9 @@
-{{ $baseURL := .Site.BaseURL }}
 {{ range $taxonomy_term, $taxonomy := .Site.Taxonomies }}
     {{ if $.Param $taxonomy_term}}
     <div class="SingleArticleHeader__taxonomy">
         {{ humanize $taxonomy_term }}: 
         {{ range $.Param $taxonomy_term }}
-        <a class="SingleArticleHeader__tag" href="{{ $baseURL }}{{ $taxonomy_term }}/{{ . | urlize }}">{{ . }}</a>
+        <a class="SingleArticleHeader__tag" href="{{ $taxonomy_term | relURL }}/{{ . | urlize }}/">{{ . }}</a>
         {{ end }}
     </div>
     {{ end }}

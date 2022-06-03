@@ -12,6 +12,6 @@
     {{ .Render "summary" }}
     {{ end }}
     <nav class="HomeSectionNav">
-      <a class="HomeSectionNav__link" href="{{ .Site.BaseURL }}{{ .Page.Section }}/">{{ .Page.Title }} &gt;</a>
+      <a class="HomeSectionNav__link" href="{{ .Page.Section | relURL }}/">{{ .Page.Title }} &gt;</a>
     </nav>
 </section>

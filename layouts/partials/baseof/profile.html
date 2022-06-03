@@ -1,9 +1,8 @@
 {{ if .Site.Author }}
-    {{ $baseURL := .Site.BaseURL }}
     <div class="Profile">
     {{ with .Site.Author.avatar }}
         <div class="ProfileAvatar">
-        <img src="{{ $baseURL }}{{ . }}" alt="Author Avatar" class="ProfileAvatar__avatar" />
+        <img src="{{ . | relURL }}" alt="Author Avatar" class="ProfileAvatar__avatar" />
         </div>
     {{ end }}
     {{ with .Site.Author.name }}
