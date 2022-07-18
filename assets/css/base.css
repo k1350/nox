@@ -42,14 +42,17 @@ pre > code {
   display: block;
   overflow-x: auto;
 }
-table tr td pre code {
+.highlight table tr td pre code {
   overflow-x: visible;
   padding: 0;
 }
-table tr td:first-child pre code span {
-  display: block;
+.highlight table tr td:first-child pre {
+  display: grid;
 }
-table tr td:last-child pre code{
+.highlight table tr td:last-child pre {
+  display: grid;
+}
+.highlight table tr td:last-child pre code{
   overflow-x: auto;
 }
 blockquote {
