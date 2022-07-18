@@ -42,6 +42,16 @@ pre > code {
   display: block;
   overflow-x: auto;
 }
+table tr td pre code {
+  overflow-x: visible;
+  padding: 0;
+}
+table tr td:first-child pre code span {
+  display: block;
+}
+table tr td:last-child pre code{
+  overflow-x: auto;
+}
 blockquote {
   border-left: 4px solid var(--focus);
   margin: 1.5em 0;
