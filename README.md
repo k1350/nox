@@ -4,6 +4,12 @@ Hugo のシンプルなダークテーマです。個人ブログ用途です。
 **公式のレビューは受けておらず、[Hugo Themes](https://themes.gohugo.io/) には掲載されていません。不具合がある可能性があります。**
 
 ![tn](https://github.com/k1350/nox/blob/main/images/tn.png)![screenshot](https://github.com/k1350/nox/blob/main/images/screenshot.png)
+## 注意点
+Hugo v0.92.2 以前と v0.93.0 以降で組み込みの Highlight の仕様が変わり、ショートコードで "linenos=table" オプションを使ったときにレイアウトが崩れるようになりました。  
+暫定対応を nox v0.2.0 で行いましたが、"hl_lines" オプションを併用した場合の表示もおかしく、レスポンシブ対応でコード部分を横スクロールするとハイライトが途切れてしまいます。  
+Hugo 公式に Issue は一応立てましたが対応の望みは薄いです。
+
+表示崩れが許容できない場合は Hugo v0.92.2 を使うか、"linenos=table" と "hl_lines" オプションを併用しないでください。
 
 ## 主な特徴
 - ダークテーマ
