@@ -49,10 +49,7 @@ pre > code {
 .highlight table tr td:first-child pre code span {
   display: block;
 }
-.highlight table tr td:last-child pre {
-  display: grid;
-}
-.highlight table tr td:last-child pre code {
+.highlight > div {
   overflow-x: auto;
 }
 blockquote {
