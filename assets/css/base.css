@@ -20,7 +20,7 @@ body {
   font-family: "Open Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   background: var(--background-body);
   color: var(--text-main);
-  overflow-wrap:break-word;
+  overflow-wrap: break-word;
   margin: 0;
   line-height: 1.57;
 }
@@ -60,7 +60,12 @@ blockquote {
 hr {
   border-color: var(--border);
 }
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-bottom: var(--margin-bottom);
   margin-top: var(--margin-top);
   color: var(--text-bright);
@@ -84,11 +89,14 @@ li {
   display: grid;
   height: 100vh;
   grid-template-rows: auto 1fr auto;
-  grid-template-columns: minmax(10px, 1fr) minmax(300px, 720px) minmax(10px, 1fr);
+  grid-template-columns: minmax(10px, 1fr) minmax(300px, 720px) minmax(
+      10px,
+      1fr
+    );
   grid-template-areas:
-        " .      header .      "
-        " .      main   .      "
-        " footer footer footer ";
+    " .      header .      "
+    " .      main   .      "
+    " footer footer footer ";
 }
 
 .MainContainer__header {
@@ -105,13 +113,16 @@ li {
 
   display: grid;
   grid-template-rows: auto 1fr auto;
-  grid-template-columns: minmax(10px, 1fr) minmax(300px, 720px) minmax(10px, 1fr);
+  grid-template-columns: minmax(10px, 1fr) minmax(300px, 720px) minmax(
+      10px,
+      1fr
+    );
   row-gap: var(--margin-bottom);
   padding: var(--margin-bottom) 0;
   grid-template-areas:
-        " . profile   . "
-        " . menu      . "
-        " . copyright . ";
+    " . profile   . "
+    " . menu      . "
+    " . copyright . ";
 }
 
 .MainLogo {
@@ -132,11 +143,11 @@ li {
   grid-template-columns: 100px 1fr;
   column-gap: 1em;
   grid-template-areas:
-        " avatar name    "
-        " avatar profile "
-        " avatar profile "
-        " avatar profile "
-        " .      links   ";
+    " avatar name    "
+    " avatar profile "
+    " avatar profile "
+    " avatar profile "
+    " .      links   ";
 }
 
 .ProfileAvatar {
@@ -186,7 +197,8 @@ li {
   margin-bottom: var(--margin-top);
 }
 
-.ListArticle__time, .SingleArticleHeader__time {
+.ListArticle__time,
+.SingleArticleHeader__time {
   margin-bottom: var(--margin-bottom);
   color: var(--text-muted);
 }
@@ -202,8 +214,7 @@ li {
 .HomeSectionNav {
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-areas:
-      " . link "
+  grid-template-areas: " . link ";
 }
 
 .HomeSectionNav__link {
@@ -223,8 +234,7 @@ li {
 .SingleArticleNav {
   display: grid;
   grid-template-columns: 40% 1fr 40%;
-  grid-template-areas:
-      " next . prev ";
+  grid-template-areas: " next . prev ";
   padding-top: var(--margin-top);
   margin-bottom: var(--margin-bottom);
 }
@@ -250,18 +260,18 @@ li {
   justify-content: center;
 }
 
-.pagination>.page-item {
+.pagination > .page-item {
   display: inline;
 }
 
-.pagination>.page-item>.page-link {
+.pagination > .page-item > .page-link {
   text-decoration: none;
 }
 
-.pagination>.active>.page-link {
+.pagination > .active > .page-link {
   color: var(--text-main);
 }
 
-.pagination>.disabled>.page-link {
+.pagination > .disabled > .page-link {
   color: var(--text-muted);
 }
